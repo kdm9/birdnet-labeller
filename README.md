@@ -44,3 +44,12 @@ a `.labels.txt` file corresponding to a WAV straight from a field recording.
 Then, in Audacity: File -> Import -> Audio -> Select the wav file, and File ->
 Import -> Labels -> Select the labels.txt file. You should see the labels pop
 up at the correct times. 	
+
+# Why?
+
+There are a bunch of GUIs for Birdnet analysis, however I typically want to
+edit and compose soundscapes in Audacity rather than just find a list of birds.
+So, I needed a way to import birdnet calls into audacity, hence this script.
+Other, possibly better, solutions probably exist; this was largely a learning
+exercise that ended up being useful.
+
