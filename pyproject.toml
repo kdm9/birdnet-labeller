@@ -1,0 +1,38 @@
+[build-system]
+requires = [
+    "setuptools>=60",
+    "wheel",
+    "setuptools-scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "birdnet-labeller"
+description = "kdm9's birdnet labeller for Audacity"
+authors = [
+    { name = "K. D. Murray", email = "info@gekkonid.com" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "birdnetlib",
+    "librosa",
+    "tensorflow",
+    "python-dateutil",
+]
+dynamic = [
+    "version",
+]
+[project.readme]
+file = "README.md" 
+content-type = "text/markdown"
+
+[project.scripts]
+birdnet-labeller = "birdnet_labeller:main"
+
+
+[tool.setuptools_scm]
+version_file = "birdnet_labeller/_version.py"
+tag_regex = "^(?P<version>[vV]?\\d+(?:\\.\\d+){0,2}[^\\+]*)(?:\\+.*)?$"
+git_describe_command = "git describe --dirty --tags --long"
+
+[tool.setuptools]
+packages = ["birdnet_labeller"]
