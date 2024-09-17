@@ -16,7 +16,7 @@ from pathlib import Path
 from collections import Counter
 
 def parse_datetime(datestr):
-    return dateutil.parser.parse(datestring)
+    return dateutil.parser.parse(datestr)
 
 def main(argv=None):
     ap = argparse.ArgumentParser()
